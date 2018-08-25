@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="user-section">
+        <div class="image">
+            <img src="{{ user.avatar_url }}">
+        </div>
+        <div class="user-details">
+            <div> Name: {{ user.name }} </div>
+            <div> Location: {{ user.location }} </div>
+            <div> Repo: {{ user.public_repos }} </div>
+            <div> Email: {{ user.email }} </div>
+            <div> Bio: {{ user.bio }} </div>
+        </div>
+    </div>
+{% endblock %}

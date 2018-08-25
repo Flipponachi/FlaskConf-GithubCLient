@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="card-container">
+        {% for user in users %}
+            <a class="card" href="{{ url_for('get_user', user_name=user.login) }}">
+                <div class="image">
+                    <img src="{{ user.avatar_url }}"/>
+                </div>
+                <h3 class="name">
+                    {{ user.login }}
+                </h3>
+            </a>
+        {% endfor %}
+    </div>
+    
+{% endblock %}
